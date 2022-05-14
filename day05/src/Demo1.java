@@ -5,8 +5,8 @@ public class Demo1 {
         int a = 10;
         int b = 20;
         method(a, b);
-        //System.out.println("a = " + a);
-        //System.out.println("b = " + b);
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
 
 
     }
@@ -15,6 +15,6 @@ public class Demo1 {
         b *= 2;
         System.out.println("a = " + a);
         System.out.println("b = " + b);
-
+        System.exit(0);
     }
 }
