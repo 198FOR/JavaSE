@@ -1,34 +1,27 @@
+/*
+* 引用数组的初始化
+*
+* */
 public class Demo {
-    static Cat cat = new Cat();
-    Dog dog = new Dog();
-    Dog dog2;
-    static Dog dog3;
-
-
     public static void main(String[] args) {
-        System.out.println("hello world!");
-        Demo d = new Demo();
-    }
+    Person[] students = new Person[2];
+    Person lee = new Person();
+    Person zhang = new Person();
+    lee.age = 20;
+    lee.name = "黎明";
+    zhang.age = 10;
+    zhang.name = "李小龙";
+    students[0] = lee;
+    students[1] = zhang;
+    students[1].print();
+    students[0].print();
 
-
-    public Demo() {
-        System.out.println("demo");
-    }
-}
-
-
-class Cat {
-    static Dog dog = new Dog();
-
-
-    public Cat() {
-        System.out.println("cat");
     }
 }
-
-
-class Dog {
-    public Dog() {
-        System.out.println("dog");
+class Person {
+    int age;
+    String name;
+    public void print(){
+        System.out.println("我的年龄是" + age + "，我的名字是" + name);
     }
 }
