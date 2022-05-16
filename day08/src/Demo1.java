@@ -1,29 +1,33 @@
 public class Demo1 {
-    static Cat cat = new Cat();
-    Dog dog = new Dog();
-    Dog dog2;
-    static Dog dog3;
-
     public static void main(String[] args) {
-        System.out.println("hello world!");
-        Demo1 d = new Demo1();
-    }
-
-    public Demo1() {
-        System.out.println("demo");
-    }
-}
-
-class Cat {
-    static Dog dog = new Dog();
-
-    public Cat() {
-        System.out.println("cat");
+        Student stu1 = new Student("李华",1001,"男",25,96);
+        Student stu2 = new Student("小明",1001,"男",25,96);
+        Student stu3 = new Student("小刚",1001,"男",25,96);
+        Student stu4 = new Student("小花",1001,"男",25,96);
+        Student stu5 = new Student("二狗",1001,"男",25,96);
     }
 }
 
-class Dog {
-    public Dog() {
-        System.out.println("dog");
+class Student {
+    String name;
+    int stuId;
+    String gender;
+    int age;
+    double score;
+
+    public Student() {
+
+    }
+
+    public Student(String name, int stuId, String gender, int age, double score) {
+        this.name = name;
+        this.stuId = stuId;
+        this.gender = gender;
+        this.age = age;
+        this.score = score;
+    }
+
+    public void print() {
+        System.out.println(name + " " + stuId + " " + gender + " " + age + " " + score);
     }
 }
