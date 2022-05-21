@@ -1,17 +1,39 @@
 package day12.example;
 
 public class Demo1 {
+    public static void main(String[] args) {
+        A t = new T();
+        t.test();
+    }
 }
 
-abstract class Ab {
-    abstract void eat();
-}
-interface Ia1{
 
+abstract class A{
+    int a;
+    static String b;
+    final int c = 0;
+    {
+        int ab;
+    }
+    static {
+        int dd = 66;
+        System.out.println("父类加载");
+    }
+
+    A(){
+        System.out.println("父类");
+    }
+    public abstract  void test();
 }
-class Dog extends Ab implements Ia1{
+class T extends A{
+    T(){
+        System.out.println("子类");
+    }
+    static {
+        System.out.println("子类加载");
+    }
     @Override
-    void eat() {
-        System.out.println("吃饭");
+     public void test() {
+        System.out.println("test");
     }
 }
